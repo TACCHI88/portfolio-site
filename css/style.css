@@ -1,0 +1,268 @@
+/*  TOP VIDEO*/
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url(./sapmle.png) no-repeat center center/cover;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.overlay {
+  /* width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+  background-size: 4px 4px;
+  z-index: 2; */
+}
+
+#loader {
+  width: 80px;
+  height: 80px;
+  display: none;
+  position: fixed;
+  _position: absolute;
+  /* IE6対策 */
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  /* heightの半分のマイナス値 */
+  margin-left: -40px;
+  /* widthの半分のマイナス値 */
+  z-index: 10;
+  /* #fadeより多い値を入れて下さい */
+}
+
+#fade {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  /* #loaderより少ない値を入れて下さい */
+}
+
+/*@@  TOP  @@*/
+
+#keyvisual-id {
+  position: relative;
+}
+
+/*@@@@@  COMMON  @@@@@*/
+
+.navbar {
+  background: black;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+
+.fixed-bg {
+  min-height: 50vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg01 {
+  background-image: url(../img/bg01.jpg);
+}
+
+/*@@@@@  OTHER  @@@@@@*/
+
+/* TOP テキストアニメーション*/
+
+.layer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 30px 60px;
+  /* border: 3px solid #fff; */
+  border-radius: 10px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.outline {
+  display: inline-block;
+  color: #ffffff;
+  /* font-size      : 36pt; */
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 1px #000000, -2px 2px 1px #000000, 2px -2px 1px #000000, -2px -2px 1px #000000, 2px 0px 1px #000000, 0px 2px 1px #000000, -2px 0px 1px #000000, 0px -2px 1px #000000;
+}
+
+#top-text {
+  text-align: center;
+  width: 500px;
+  margin: 0;
+  font-size: 78px;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+  color: #fff;
+}
+
+.desc {
+  padding: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  opacity: 0;
+  transition: 1s 1.5s;
+  color: #fff;
+  text-align: center;
+}
+
+.ex1, .ex3 {
+  opacity: 0;
+}
+
+.ex1 span, .ex3 span {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+}
+
+.ex2 {
+  opacity: 0;
+  font-weight: 600;
+}
+
+.ex2 span {
+  position: relative;
+  left: -10px;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/*@@@@  ABOUT  @@@@*/
+
+.about-ul {
+  font-size: 18px;
+}
+
+.about-ul li {
+  padding: 5px 0;
+}
+
+#twitter-link {
+  text-decoration: none;
+}
+
+#test1 img {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.card {
+  max-width: 450px;
+}
+
+.card .card-header {
+  padding: 0;
+}
+
+.card button {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.mark1 {
+  background-color: red;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/*@@@@  SERVICE  @@@@*/
+
+.service-icon {
+  font-size: 32px;
+}
+
+.service-skill {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/*@@@@  SKILL  @@@@*/
+
+.skill-icon {
+  font-size: 46px;
+}
+
+.skill-detail {
+  font-size: 18px;
+}
+
+/*@@@@  WORK  @@@@*/
+
+/*@@@@  CONTACT  @@@@*/
+
+.formrun {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formrun label {
+  display: block;
+  width: 100%;
+}
+
+.formrun input {
+  display: block;
+  width: 100%;
+}
+
+.formrun textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-content {
+  margin-bottom: 20px;
+}
+
+.formrun button {
+  width: 100%;
+}
+
+/*@@@@  OTHERS  @@@@*/
+
+ul li {
+  line-height: 1.2;
+  padding: 0.5em 0;
+  list-style-type: none!important;
+}
+
+.li-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fas {
+  padding-right: 5px;
+}
+
+.font-sp {
+  font-family: 'Kaushan Script', cursive;
+}

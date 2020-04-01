@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- jQuery library -->
+    <!-- <script type="text /javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+    <!-- standard.css -->
+
+    <!--タイトル用フォント-->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--コンタクトフォーム用-->
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pagetop.css">
+    <link rel="stylesheet" href="css/icon.css">
+
+    <title>Tate's Portfolio</title>
+</head>
+
+<body class="bg-light">
+
+    <div id="loader">
+        <img src="img/loading.gif" alt="Now Loading..." width="80px" height="80px" />
+    </div>
+    <div id="fade"></div>
+    <div id="container">
+
+
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand text-white" href="#"><img src="img/logo_s.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav font-sp">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#service">SERVICE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#work">WORKS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#skill">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="page_top"><a href="#"></a></div>
+
+        <!--movie-->
+        <div class="wrapper">
+            <video controlslist="nodownload" autoplay muted loop poster="img/poster.jpg" id="video"
+                style="object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4" src="img/movie_s.mp4">
+            </video>
+            <div class="layer outline font-sp">
+                <p class="ex1" id="top-text">Welcome to</p>
+                <p class="ex3" id="top-text">- MY -</p>
+                <p class="ex2" id="top-text">Portfolio</p>
+                <p class="desc">ホームページ制作のお手伝いいたします</p>
+            </div>
+        </div>
+
+        <script src="textyle.min.js"></script>
+        <script>
+            $(window).on('load', function () {
+                //simple use
+                $('.ex1').textyle();
+                $('.ex3').textyle({
+                    duration: 400,
+                    delay: 100,
+                });
+                //you can select options or add callback
+                $('.ex2').textyle({
+                    duration: 800,
+                    delay: 200,
+                    easing: 'swing',
+                    callback: function () {
+                        $(this).css({
+                            color: 'coral',
+                            transition: '1s',
+                        });
+                        $('.desc').css('opacity', 1);
+                    }
+                });
+            });
+        </script>
+
+
+        <div class="container bg-white py-5 my-5">
+
+            <!--ABOUT ME-->
+            <div class="font-sp" id="about">
+                <h2 class="text-center py-3">ABOUT</h2>
+            </div>
+            <div class="d-flex flex-wrap pb-5" id="test1">
+                <div class="col-md-6 col-12 d-flex justify-content-center p-0">
+                    <img class="img-fluid align-self-center" src="img/profile-img.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-12 align-self-center p-0">
+
+                    <ul class="about-ul pl-2 m-0">
+                        <li class="li-name">たっち<a id="twitter-link" href="https://twitter.com/TACCHI88">@TACCHI88</a>
+                        </li>
+                        <li>栃木県/ 宇都宮市在住</li>
+                        <li>好奇心の赴くままに色々なことにチャレンジしています</li>
+                        <li>＊現在はWEB制作を楽しんでます＊</li>
+                    </ul>
+                    <!--アコーディオン-->
+                    <div class="accordion pl-2" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-dark" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        [特徴1] プログラミング好き
+                                        <span class="mark1">NEW</span>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    2020年/ コミュニティ入会を機にプログラミング学習開始。
+                                    現在はWordPress制作がメイン
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        [特徴2] 筋トレ好き
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    2018年末 / kanekinさんのyoutube動画をきっかけに筋トレ開始。
+                                    目標はBP 100kg / DL 180kg / SQ 180kg
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        [特徴3] 英語学習好き
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    2015年/ バイリンガールちかさんの動画をきっかけに学習開始。
+                                    TOEIC 895。2018年/ 海外赴任(イギリスで技術営業)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="space-100"></div>
+
+            <!--SERVICE-->
+            <div class="font-sp" id="service">
+                <h2 class="text-center py-3">SERVICES</h2>
+            </div>
+            <div class="d-flex flex-wrap pb-5">
+                <div class="col-md-4 col-12 fadein">
+                    <div class="service-icon text-center py-2"><i class="fas fa-laptop-code shake"></i></div>
+                    <div class="service-skill text-center py-2">WEBサイト制作</div>
+                    <div class="service-detail">
+                        <p class="">ホームページ、LP（ランディングページ）を制作いたします。レスポンシブ対応もお任せください。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 fadein">
+                    <div class="service-icon text-center py-2"><i class="fas fa-pencil-alt bounce"></i></div>
+                    <div class="service-skill text-center py-2">コーディング代行</div>
+                    <div class="service-detail">
+                        <p class="">HTML/CSS/Bootstrap/JavaScript(jQuery)を用いて適切にコーディングいたします。レスポンシブ対応もお任せください。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 fadein">
+                    <div class="service-icon text-center py-2"><i class="fab fa-wordpress wrench"></i></div>
+                    <div class="service-skill text-center py-2">WordPressサイト制作</div>
+                    <div class="service-detai">
+                        <p class="">CMS「Wordpress」を利用したWebサイトの構築が可能です。デザイン制作込みも可能です（テンプレートテーマ利用）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Fixed image-->
+        <div class="fixed-bg bg01">
+            <h1></h1>
+        </div>
+
+
+        <div class="container bg-white py-5 my-5">
+            <!--WORK-->
+            <div class="font-sp" id="work">
+                <h2 class="text-center py-5">WORKS</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12 pb-5 fadein">
+                    <div class="card">
+                        <img src="img/samplecompany-s_R.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">サンプル会社サイト模写</h5>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalScrollable_1">
+                                ページ全体を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 pb-5 fadein">
+                    <div class="card">
+                        <img src="img/Airbnb_1s_R.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">Airbnb模写1</h5>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalScrollable_2">
+                                ページ全体を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 pb-5 fadein">
+                    <div class="card">
+                        <img src="img/Airbnb_2s_R.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">Airbnb模写2</h5>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalScrollable_3">
+                                ページ全体を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 pb-5 fadein">
+                    <div class="card">
+                        <img src="img/daytra_2nd.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">デイトラ2nd</h5>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalScrollable_4">
+                                ページ全体を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 pb-5 fadein">
+                    <div class="card">
+                        <img src="img/daytra_3rd.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bolder">デイトラ3rd(WordPressサイト)</h5>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalScrollable_5">
+                                ページ全体を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- モーダルの設定 WORKS 1 -->
+            <div class="modal fade" id="exampleModalScrollable_1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">モーダルのタイトル</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="img/Samplesite_full_R.png">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- モーダルの設定 WORKS 2 -->
+            <div class="modal fade" id="exampleModalScrollable_2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">モーダルのタイトル</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="img/Airbnb_1s_full_R.png">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- モーダルの設定 WORKS 3 -->
+            <div class="modal fade" id="exampleModalScrollable_3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">モーダルのタイトル</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="img/Airbnb_2s_full_R.png">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- モーダルの設定 WORKS 4 -->
+            <div class="modal fade" id="exampleModalScrollable_4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">モーダルのタイトル</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="img/daytra_2nd_full_R.jpg">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- モーダルの設定 WORKS 5 -->
+            <div class="modal fade" id="exampleModalScrollable_5" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">モーダルのタイトル</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="img/daytra_3rd_full_R.png">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-100"></div>
+
+            <!--SKILL-->
+            <div class="font-sp" id="skill">
+                <h2 class="text-center py-3">SKILLS</h2>
+            </div>
+            <div class="d-flex flex-wrap pb-5 fadein">
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-html5 horizontal"></i></div>
+                    <div class="skill-detail text-center pb-2">HTML5</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-css3-alt shake"></i></div>
+                    <div class="skill-detail text-center pb-2">CSS3</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-sass double-flash"></i></div>
+                    <div class="skill-detail text-center pb-2">Sass</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-bootstrap bounce"></i></div>
+                    <div class="skill-detail text-center pb-2">bootstrap</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-js spin"></i></div>
+                    <div class="skill-detail text-center pb-2">JavaScript</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-php pulse"></i></div>
+                    <div class="skill-detail text-center pb-2">PHP</div>
+                </div>
+                <div class="col-md-4 col-6 border">
+                    <div class="skill-icon text-center py-1"><i class="fab fa-wordpress tada"></i></div>
+                    <div class="skill-detail text-center pb-2">WordPress</div>
+                </div>
+            </div>
+
+            <div class="space-100"></div>
+
+            <!--CONTACT-->
+            <div class="font-sp" id="contact">
+                <h2 class="text-center py-3">CONTACT</h2>
+                <h6 class="text-center text-secondary py-3">お見積もりや案件のご相談など、お気軽にお問い合わせください。<br>
+                    原則1～3日以内にご連絡させていただきます。</h3>
+            </div>
+
+            <!-- class, action, methodを変更しないでください -->
+            <form class="formrun" action="https://form.run/api/v1/r/64y0s7wi09frnqlbp3w4pczs" method="post">
+                <!-- ↓自由に要素を追加・編集することができます -->
+                <div class="form-content">
+                    <label>お名前</label>
+                    <input name="お名前" type="text">
+                </div>
+
+                <div class="form-content">
+                    <label>メールアドレス [必須]</label>
+                    <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+                    <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+                </div>
+
+                <div class="form-content">
+                    <label>お問い合わせ [必須]</label>
+                    <textarea rows=8 name="お問い合わせ" data-formrun-required></textarea>
+                    <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+                </div>
+
+                <!-- ボット投稿をブロックするためのタグ -->
+                <div class="_formrun_gotcha">
+                    <style media="screen">
+                        ._formrun_gotcha {
+                            position: absolute !important;
+                            height: 1px;
+                            width: 1px;
+                            overflow: hidden;
+                        }
+                    </style>
+                    <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                    <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+                </div>
+
+                <button class="btn btn-dark" type="submit" data-formrun-error-text="未入力の項目があります"
+                    data-formrun-submitting-text="送信中...">送信</button>
+            </form>
+
+            <div class="space-100"></div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div class="py-4">
+                            <h4 class="d-inline-block py-3 border-bottom border-info font-sp">Profile</h4>
+                        </div>
+                        <div class="p-3 mx-5">
+                            <img class="img-fluid rounded-circle" src="img/profile-img.jpg" alt="">
+                        </div>
+                        <div class="p-2">
+                            英語学習＆筋トレ好きで、プログラミング勉強中の32歳。<br><br>
+                            好奇心の赴くままに色々なことにチャレンジしています。
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="py-4">
+                            <h4 class="d-inline-block py-3 border-bottom border-info font-sp">Portfolio</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">tateblog（ブログ）</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="py-4">
+                            <h4 class="d-inline-block py-3 border-bottom border-info font-sp">Twitter</h4>
+                        </div>
+                        <a class="twitter-timeline" data-lang="ja" data-height="500"
+                            href="https://twitter.com/TACCHI88?ref_src=twsrc%5Etfw">Tweets by TACCHI88</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-dark text-white text-center p-3">
+                Copyright - たっち@TACCHI88, 2020 All Rights Reserved.
+            </div>
+
+        </footer>
+
+    </div>
+    <!--loderの閉じタグ-->
+
+    <!-- loader -->
+    <script type="text/javascript">
+        $('head').append(
+            '<style type="text/css">#container { display: none; } #fade, #loader { display: block; }</style>'
+        );
+
+        jQuery.event.add(window, "load", function () { // 全ての読み込み完了後に呼ばれる関数
+            var pageH = $("#container").height();
+
+            $("#fade").css("height", pageH).delay(900).fadeOut(800);
+            $("#loader").delay(600).fadeOut(300);
+            $("#container").css("display", "block");
+        });
+    </script>
+
+
+    <!-- PAGE TOP -->
+    <script>
+        jQuery(function () {
+            var pagetop = $('#page_top');
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500); //0.5秒かけてトップへ移動
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                $('.fadein').each(function () {
+                    var targetElement = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > targetElement - windowHeight + 150) {
+                        $(this).css('opacity', '1');
+                        $(this).css('transform', 'translateY(0)');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
